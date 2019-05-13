@@ -6,20 +6,19 @@ The package is available by importing its default function:
 import preact from '@externs/preact'
 ```
 
+The actual externs are found in the `type/externs.js` file which is referenced by the package in the `externs` field.
+
 %~%
 
 ```## preact
-[
-  ["arg1", "string"],
-  ["arg2?", "boolean"]
-]
 ```
 
-Call this function to get the result you want.
+The entry module, `src/index.js` of this package destructures the properties available on preact global variable, and exports them.
 
-%TYPEDEF types/index.xml%
+%EXAMPLE: src%
+
+The usage is up to the developers to decide, but the package does not contain any functionality in itself, other than to provide the externs and the way to import preact in the code.
 
 %EXAMPLE: example, ../src => @externs/preact%
-%FORK example%
 
 %~%
