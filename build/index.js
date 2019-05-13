@@ -1,34 +1,32 @@
-const { debuglog } = require('util');
+module.exports=preact
 
-const LOG = debuglog('@externs/preact')
-
-/**
- * The Externs For Preact.
- * @param {_@externs/preact.Config} [config] Options for the program.
- * @param {boolean} [config.shouldRun=true] A boolean option. Default `true`.
- * @param {string} config.text A text to return.
- */
-               async function preact(config = {}) {
-  const {
-    shouldRun = true,
-    text,
-  } = config
-  if (!shouldRun) return
-  LOG('@externs/preact called with %s', text)
-  return text
-}
-
-/* documentary types/index.xml */
-/**
- * @suppress {nonStandardJsDocs}
- * @typedef {_@externs/preact.Config} Config Options for the program.
- */
-/**
- * @suppress {nonStandardJsDocs}
- * @typedef {Object} _@externs/preact.Config Options for the program.
- * @prop {boolean} [shouldRun=true] A boolean option. Default `true`.
- * @prop {string} text A text to return.
- */
+const {
+  h,
+  createElement,
+	cloneElement,
+	createRef,
+	Component,
+	render,
+	rerender,
+	options,
+} = preact
 
 
-module.exports = preact
+
+
+
+
+
+
+
+
+
+
+module.exports.h = h
+module.exports.createElement = createElement
+module.exports.cloneElement = cloneElement
+module.exports.createRef = createRef
+module.exports.Component = Component
+module.exports.render = render
+module.exports.rerender = rerender
+module.exports.options = options
