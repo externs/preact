@@ -1,6 +1,6 @@
 {
   "name": "@externs/preact",
-  "version": "0.0.0-pre",
+  "version": "1.0.0",
   "description": "The Externs For Preact.",
   "main": "build/index.js",
   "module": "src/index.js",
