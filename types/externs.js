@@ -1,13 +1,10 @@
-/**
- * @const
- * @record
- */
+/** @const */
 var preact = {}
 
 /**
  * @param {string|!Function} nodeName An element name. Ex: `div`, `a`, `span`, etc.
  * @param {Object} [attributes] Any attributes/props to set on the created element.
- * @param {...!(preact.VNode|Array<!preact.VNode>)} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
+ * @param {...*} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
  * @return {!preact.VNode}
  */
 preact.h = function(nodeName, attributes, ...args) {}
@@ -73,14 +70,14 @@ preact.VNode = function(){}
 preact.VNode.prototype.nodeName
 /**
  * The children of node.
- * @type {Array<!VNode|string>}
+ * @type {!Array<!preact.VNode|string>}
  */
 preact.VNode.prototype.children
 /**
  * The key used to identify this VNode in a list.
  * @type {string|number|undefined}
  */
-preact.VNode.prototype.children
+preact.VNode.prototype.key
 /**
  * The properties of this VNode.
  * @type {Object}
@@ -88,6 +85,7 @@ preact.VNode.prototype.children
 preact.VNode.prototype.attributes
 
 /**
+ * @interface
  * @param {!Object} [props] The initial component props
  * @param {!Object} [context] The initial context from parent components' getChildContext
  */
@@ -104,7 +102,6 @@ preact.Component.prototype.state
  */
 preact.Component.prototype.setState = function(state, callback) {}
 /**
- * @param {!Object} state
  * @param {function(): void} callback
  */
 preact.Component.prototype.forceUpdate = function(callback) {}
