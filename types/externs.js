@@ -31,9 +31,9 @@ preact.cloneElement = function(vnode, props, args) {}
 preact.createRef = function() {}
 /**
  * Render JSX into a `parent` Element.
- * @param {!preact.VNode} vnode A (JSX) VNode to render
- * @param {!Element} parent DOM element to render into
- * @param {!Element} [merge] Attempt to re-use an existing DOM tree rooted at `merge`
+ * @param {!preact.VNode} vnode A (JSX) VNode to render.
+ * @param {Element} parent DOM element to render into.
+ * @param {Element} [merge] Attempt to re-use an existing DOM tree rooted at `merge`.
  */
 preact.render = function(vnode, parent, merge) {}
 /**
@@ -85,7 +85,7 @@ preact.VNode.prototype.key
 preact.VNode.prototype.attributes
 
 /**
- * @interface
+ * @constructor
  * @param {!Object} [props] The initial component props
  * @param {!Object} [context] The initial context from parent components' getChildContext
  */
@@ -98,18 +98,18 @@ preact.Component.prototype.props
 preact.Component.prototype.state
 /**
  * @param {!Object} state
- * @param {function(): void} callback
+ * @param {function(): void} [callback]
  */
 preact.Component.prototype.setState = function(state, callback) {}
 /**
- * @param {function(): void} callback
+ * @param {function(): void} [callback]
  */
 preact.Component.prototype.forceUpdate = function(callback) {}
 /**
- * @param {!Object} props
- * @param {!Object} state
- * @param {!Object} context
- * @return {!preact.VNode}
+ * @param {!Object} [props]
+ * @param {!Object} [state]
+ * @param {!Object} [context]
+ * @return {preact.VNode}
  */
 preact.Component.prototype.render = function(props, state, context) {}
 preact.Component.prototype.componentWillMount = function() {}
