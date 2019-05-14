@@ -1,3 +1,9 @@
+## 14 May 2019
+
+### [1.1.0](https://github.com/dpck/preact/compare/v1.0.0...v1.1.0)
+
+- [fix] Adjust externs to allow possible null in rendering, returning null from component.render, make _Component_ constructor, and make attributes to _Component_ methods optional.
+
 ## 13 May 2019
 
 ### [1.0.0](https://github.com/dpck/preact/compare/v0.0.0-pre...v1.0.0)
