@@ -159,54 +159,12 @@ preact.Component.prototype.forceUpdate = function(callback) {}
  */
 preact.Component.prototype.render = function(props, state, context) {}
 /**
-
  */
 preact.Component.prototype.componentWillMount = function() {}
 /**
-
  */
 preact.Component.prototype.componentDidMount = function() {}
 /**
-
- */
-preact.Component.prototype.componentWillUnmount = function() {}
-/**
- * @return {!Object}
- */
-preact.Component.prototype.getChildContext = function() {}
-/**
- * @param {!Object=} [nextProps] New properties.
- * @param {!Object=} [nextContext] New context.
- */
-preact.Component.prototype.componentWillReceiveProps = function(nextProps, nextContext) {}
-/**
- * @param {!Object=} [nextProps] New properties.
- * @param {!Object=} [nextState] New state.
- * @param {!Object=} [nextContext] New context.
- * @return {boolean}
- */
-preact.Component.prototype.shouldComponentUpdate = function(nextProps, nextState, nextContext) {}
-/**
- * @param {!Object=} [nextProps] New properties.
- * @param {!Object=} [nextState] New state.
- * @param {!Object=} [nextContext] New context.
- */
-preact.Component.prototype.componentWillUpdate = function(nextProps, nextState, nextContext) {}
-/**
- * @param {!Object=} [prevProps] Previous properties.
- * @param {!Object=} [prevState] Previous state.
- * @param {!Object=} [prevContext] Previous context.
- */
-preact.Component.prototype.componentDidUpdate = function(prevProps, prevState, prevContext) {}
-
- */
-preact.Component.prototype.componentWillMount = function() {}
-/**
-
- */
-preact.Component.prototype.componentDidMount = function() {}
-/**
-
  */
 preact.Component.prototype.componentWillUnmount = function() {}
 /**
