@@ -3,7 +3,7 @@
  * @externs
  */
 
-/* typal types/methods.xml externs */
+/* typal types/methods.xml */
 /** @const */
 var preact = {}
 /**
@@ -50,7 +50,7 @@ preact.rerender = function() {}
 // because each option is optional, they are defined as types and not functions
 // to allow "|undefined".
 // todo typal: write constructor still ( = function(arg,arg2) {})
-/* typal types/options.xml externs */
+/* typal types/options.xml */
 /**
  * Options for Preact.
  * @record
@@ -85,7 +85,7 @@ preact.options.prototype.afterUpdate = function() {}
  */
 preact.options.prototype.beforeUnmount = function() {}
 
-/* typal types/vnode.xml externs */
+/* typal types/vnode.xml */
 /**
  * A component that extends preact.Component to set default properties. https://git.io/fjHoZ
  * @interface
@@ -122,7 +122,7 @@ preact.VNode.prototype.key
  */
 preact.VNode.prototype.attributes
 
-/* typal types/component.xml externs */
+/* typal types/component.xml */
 /**
  * Preact component.
  * @param {!Object=} [props] The initial component props.
@@ -159,6 +159,45 @@ preact.Component.prototype.forceUpdate = function(callback) {}
  */
 preact.Component.prototype.render = function(props, state, context) {}
 /**
+
+ */
+preact.Component.prototype.componentWillMount = function() {}
+/**
+
+ */
+preact.Component.prototype.componentDidMount = function() {}
+/**
+
+ */
+preact.Component.prototype.componentWillUnmount = function() {}
+/**
+ * @return {!Object}
+ */
+preact.Component.prototype.getChildContext = function() {}
+/**
+ * @param {!Object=} [nextProps] New properties.
+ * @param {!Object=} [nextContext] New context.
+ */
+preact.Component.prototype.componentWillReceiveProps = function(nextProps, nextContext) {}
+/**
+ * @param {!Object=} [nextProps] New properties.
+ * @param {!Object=} [nextState] New state.
+ * @param {!Object=} [nextContext] New context.
+ * @return {boolean}
+ */
+preact.Component.prototype.shouldComponentUpdate = function(nextProps, nextState, nextContext) {}
+/**
+ * @param {!Object=} [nextProps] New properties.
+ * @param {!Object=} [nextState] New state.
+ * @param {!Object=} [nextContext] New context.
+ */
+preact.Component.prototype.componentWillUpdate = function(nextProps, nextState, nextContext) {}
+/**
+ * @param {!Object=} [prevProps] Previous properties.
+ * @param {!Object=} [prevState] Previous state.
+ * @param {!Object=} [prevContext] Previous context.
+ */
+preact.Component.prototype.componentDidUpdate = function(prevProps, prevState, prevContext) {}
 
  */
 preact.Component.prototype.componentWillMount = function() {}
