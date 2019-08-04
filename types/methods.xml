@@ -1,0 +1,43 @@
+<types namespace="preact">
+
+  <method name="h" alias="createElement" desc="The pragma (rendering) function." return="!preact.VNode">
+    <arg name="nodeName" type="string|!Function">
+      An element name. Ex: `div`, `a`, `span`, etc.
+    </arg>
+    <arg name="attributes" type="Object" opt>
+      Any attributes/props to set on the created element.
+    </arg>
+    <arg type="!(preact.VNode|Array<!preact.VNode>)" name="...args">
+      Additional arguments are taken to be children to append. Can be infinitely nested Arrays.  
+    </arg>
+  </method>
+
+  <method name="cloneElement" desc="Clones the given VNode, optionally adding attributes/props and replacing its children." return="!preact.VNode">
+    <arg name="vnode" type="!preact.VNode">
+      The virtual DOM element to clone.
+    </arg>
+    <arg name="props" type="Object" opt>
+      Attributes/props to add when cloning.
+    </arg>
+    <arg type="!(preact.VNode|Array<!preact.VNode>)" name="...args">
+      Any additional arguments will be used as replacement children.
+    </arg>
+  </method>
+
+  <method name="createRef" desc="Just returns an object...?" return="!Object"/>
+
+  <method name="render" desc="Render JSX into a `parent` Element.">
+    <arg name="vnode" type="!preact.VNode">
+      A (JSX) VNode to render.
+    </arg>
+    <arg name="parent" type="Element">
+      DOM element to render into.
+    </arg>
+    <arg name="merge" type="Element" opt>
+      Attempt to re-use an existing DOM tree rooted at `merge`.
+    </arg>
+  </method>
+
+  <method name="rerender" desc="Rerenders all rendered elements." />
+
+</types>

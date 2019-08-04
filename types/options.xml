@@ -1,0 +1,25 @@
+<types namespace="preact">
+
+  <type record name="options" desc="Options for Preact.">
+    <prop boolean name="syncComponentUpdates" opt/>
+    <fn name="debounceRendering" opt>
+      <arg type="function(): void" name="callback">The callback.</arg>
+    </fn>
+    <fn name="vnode" opt>
+      <arg type="!preact.VNode" name="vnode">The VNode.</arg>
+    </fn>
+    <fn name="event" return="!Event" opt>
+      <arg type="!Event" name="event">The event.</arg>
+    </fn>
+    <fn name="afterMount" opt>
+      <arg type="!preact.Component" name="component">The component.</arg>
+    </fn>
+    <fn name="afterUpdate" opt>
+      <arg type="!preact.Component" name="component">The component.</arg>
+    </fn>
+    <fn name="beforeUnmount" opt>
+      <arg type="!preact.Component" name="component">The component.</arg>
+    </fn>
+  </type>
+
+</types>
