@@ -63,27 +63,27 @@ preact.options.prototype.syncComponentUpdates
 /**
  * @type {(function(function(): void): void)|undefined}
  */
-preact.options.prototype.debounceRendering = function() {}
+preact.options.prototype.debounceRendering = function(callback) {}
 /**
  * @type {(function(!preact.VNode): void)|undefined}
  */
-preact.options.prototype.vnode = function() {}
+preact.options.prototype.vnode = function(vnode) {}
 /**
  * @type {(function(!Event): !Event)|undefined}
  */
-preact.options.prototype.event = function() {}
+preact.options.prototype.event = function(event) {}
 /**
  * @type {(function(!preact.Component): void)|undefined}
  */
-preact.options.prototype.afterMount = function() {}
+preact.options.prototype.afterMount = function(component) {}
 /**
  * @type {(function(!preact.Component): void)|undefined}
  */
-preact.options.prototype.afterUpdate = function() {}
+preact.options.prototype.afterUpdate = function(component) {}
 /**
  * @type {(function(!preact.Component): void)|undefined}
  */
-preact.options.prototype.beforeUnmount = function() {}
+preact.options.prototype.beforeUnmount = function(component) {}
 
 /* typal types/vnode.xml */
 /**

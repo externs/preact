@@ -43,12 +43,12 @@ export {
  * @typedef {preact.options} options `＠record` Options for Preact.
  * @typedef {Object} preact.options `＠record` Options for Preact.
  * @prop {boolean} [syncComponentUpdates]
- * @prop {function(function(): void): void} [debounceRendering]
- * @prop {function(!preact.VNode): void} [vnode]
- * @prop {function(!Event): !Event} [event]
- * @prop {function(!preact.Component): void} [afterMount]
- * @prop {function(!preact.Component): void} [afterUpdate]
- * @prop {function(!preact.Component): void} [beforeUnmount]
+ * @prop {(callback: function(): void) => void} [debounceRendering]
+ * @prop {(vnode: !preact.VNode) => void} [vnode]
+ * @prop {(event: !Event) => !Event} [event]
+ * @prop {(component: !preact.Component) => void} [afterMount]
+ * @prop {(component: !preact.Component) => void} [afterUpdate]
+ * @prop {(component: !preact.Component) => void} [beforeUnmount]
  */
 
 /* typal types/vnode.xml namespace */
