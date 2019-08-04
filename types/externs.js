@@ -98,7 +98,7 @@ preact._Component = function() {}
 preact._Component.prototype.defaultProps
 /**
  * Virtual DOM Node.
- * @interface
+ * @constructor
  */
 preact.VNode = function() {}
 /**
@@ -122,63 +122,79 @@ preact.VNode.prototype.key
  */
 preact.VNode.prototype.attributes
 
-
+/* typal types/component.xml externs */
 /**
+ * Preact component.
+ * @param {!Object=} [props] The initial component props.
+ * @param {!Object=} [context] The initial context from parent components' getChildContext.
  * @constructor
- * @param {!Object} [props] The initial component props
- * @param {!Object} [context] The initial context from parent components' getChildContext
  */
 preact.Component = function(props, context) {}
-/** @type {!Object} */
+/**
+ * @type {!Object}
+ */
 preact.Component.prototype.context
-/** @type {!Object} */
+/**
+ * @type {!Object}
+ */
 preact.Component.prototype.props
-/** @type {!Object} */
+/**
+ * @type {!Object}
+ */
 preact.Component.prototype.state
 /**
- * @param {!Object} state
- * @param {function(): void} [callback]
+ * @param {!Object} state The state.
+ * @param {function(): void=} [callback] The callback after completion.
  */
 preact.Component.prototype.setState = function(state, callback) {}
 /**
- * @param {function(): void} [callback]
+ * @param {function(): void=} [callback] The callback after completion.
  */
 preact.Component.prototype.forceUpdate = function(callback) {}
 /**
- * @param {!Object} [props]
- * @param {!Object} [state]
- * @param {!Object} [context]
+ * @param {!Object=} [props] Component properties.
+ * @param {!Object=} [state] Component state.
+ * @param {!Object=} [context] Component context.
  * @return {preact.VNode}
  */
 preact.Component.prototype.render = function(props, state, context) {}
+/**
+
+ */
 preact.Component.prototype.componentWillMount = function() {}
+/**
+
+ */
 preact.Component.prototype.componentDidMount = function() {}
+/**
+
+ */
 preact.Component.prototype.componentWillUnmount = function() {}
 /**
- * @returns {!Object}
+ * @return {!Object}
  */
 preact.Component.prototype.getChildContext = function() {}
 /**
- * @param {!Object} [nextProps]
- * @param {!Object} [nextContext]
+ * @param {!Object=} [nextProps] New properties.
+ * @param {!Object=} [nextContext] New context.
  */
 preact.Component.prototype.componentWillReceiveProps = function(nextProps, nextContext) {}
 /**
- * @param {!Object} [nextProps]
- * @param {!Object} [nextState]
- * @param {!Object} [nextContext]
+ * @param {!Object=} [nextProps] New properties.
+ * @param {!Object=} [nextState] New state.
+ * @param {!Object=} [nextContext] New context.
  * @return {boolean}
  */
 preact.Component.prototype.shouldComponentUpdate = function(nextProps, nextState, nextContext) {}
 /**
- * @param {!Object} [nextProps]
- * @param {!Object} [nextState]
- * @param {!Object} [nextContext]
+ * @param {!Object=} [nextProps] New properties.
+ * @param {!Object=} [nextState] New state.
+ * @param {!Object=} [nextContext] New context.
  */
 preact.Component.prototype.componentWillUpdate = function(nextProps, nextState, nextContext) {}
 /**
- * @param {!Object} [prevProps]
- * @param {!Object} [prevState]
- * @param {!Object} [prevContext]
+ * @param {!Object=} [prevProps] Previous properties.
+ * @param {!Object=} [prevState] Previous state.
+ * @param {!Object=} [prevContext] Previous context.
  */
 preact.Component.prototype.componentDidUpdate = function(prevProps, prevState, prevContext) {}

@@ -1,10 +1,85 @@
 <types namespace="preact">
 
-  <interface name="Component" 
-    desc="A component that extends preact.Component to set default properties. https://git.io/fjHoZ">
-    <prop type="!Object" name="defaultProps">
-      The properties that will be assigned on the component by _Preact_ when constructing it.
-    </prop>
-  </interface>
+  <constructor name="Component" desc="Preact component.">
+    <arg type="!Object" name="props" opt>The initial component props.</arg>
+    <arg type="!Object" name="context" opt>
+      The initial context from parent components' getChildContext.
+    </arg>
+
+    <prop type="!Object" name="context"/>
+    <prop type="!Object" name="props"/>
+    <prop type="!Object" name="state"/>
+
+    <fn name="setState">
+      <arg type="!Object" name="state">The state.</arg>
+      <arg type="function(): void" name="callback" opt>
+        The callback after completion.
+      </arg>
+    </fn>
+    <fn name="forceUpdate">
+      <arg type="function(): void" name="callback" opt>
+        The callback after completion.
+      </arg>
+    </fn>
+    <fn name="render" return="preact.VNode">
+      <arg type="!Object" name="props" opt>
+        Component properties.
+      </arg>
+      <arg type="!Object" name="state" opt>
+        Component state.
+      </arg>
+      <arg type="!Object" name="context" opt>
+        Component context.
+      </arg>
+    </fn>
+    <fn name="componentWillMount" />
+    <fn name="componentDidMount" />
+    <fn name="componentWillUnmount" />
+
+    <fn name="getChildContext" return="!Object" />
+
+    <fn name="componentWillReceiveProps">
+      <arg type="!Object" name="nextProps" opt>
+        New properties.
+      </arg>
+      <arg type="!Object" name="nextContext" opt>
+        New context.
+      </arg>
+    </fn>
+    <fn name="shouldComponentUpdate" return="boolean">
+      <arg type="!Object" name="nextProps" opt>
+        New properties.
+      </arg>
+      <arg type="!Object" name="nextState" opt>
+        New state.
+      </arg>
+      <arg type="!Object" name="nextContext" opt>
+        New context.
+      </arg>
+    </fn>
+    <fn name="componentWillUpdate">
+      <arg type="!Object" name="nextProps" opt>
+        New properties.
+      </arg>
+      <arg type="!Object" name="nextState" opt>
+        New state.
+      </arg>
+      <arg type="!Object" name="nextContext" opt>
+        New context.
+      </arg>
+    </fn>
+    <fn name="componentDidUpdate">
+      <arg type="!Object" name="prevProps" opt>
+        Previous properties.
+      </arg>
+      <arg type="!Object" name="prevState" opt>
+        Previous state.
+      </arg>
+      <arg type="!Object" name="prevContext" opt>
+        Previous context.
+      </arg>
+    </fn>
+
+  </constructor>
 
 </types>

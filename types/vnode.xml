@@ -7,7 +7,7 @@
     </prop>
   </interface>
 
-  <interface name="VNode" desc="Virtual DOM Node.">
+  <constructor name="VNode" desc="Virtual DOM Node.">
     <prop name="nodeName" type="string|preact._Component">
       The string of the DOM node to create or Component constructor to render.
     </prop>
@@ -20,6 +20,6 @@
     <prop name="attributes" type="Object">
       The properties of this VNode.
     </prop>
-  </interface>
+  </constructor>
 
 </types>
