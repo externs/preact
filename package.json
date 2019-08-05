@@ -44,6 +44,7 @@
     "alamode": "^2.4.0",
     "documentary": "^1.30.2",
     "eslint-config-artdeco": "1.0.1",
+    "typal": "^1.20.1",
     "yarn-s": "1.1.0",
     "zoroaster": "^4.1.1-alpha"
   }

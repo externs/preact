@@ -111,11 +111,6 @@ preact.VNode.prototype.key
  * @type {Object}
  */
 preact.VNode.prototype.attributes
-/**
- * A component that extends preact.Component to set default properties. https://git.io/fjHoZ
- * @typedef {function(new: preact.Component)}
- */
-preact.ComponentConstructor
 
 /**
  * Static default property.
@@ -147,6 +142,11 @@ preact.Component.prototype._disable
  */
 preact.Component.prototype.__x
 /**
+ * Properties that will be assigned upon construction of the component.
+ * @type {(!Object)|undefined}
+ */
+preact.Component.defaultProps
+/**
  * The context.
  * @type {!Object}
  */
@@ -161,6 +161,10 @@ preact.Component.prototype.props
  * @type {!Object}
  */
 preact.Component.prototype.state
+/**
+ * @type {(function(!Object,!Object): !Object)|undefined}
+ */
+preact.Component.getDerivedStateFromProps = function(props, state) {}
 /**
  * @param {!Object} state The state.
  * @param {function(): void=} [callback] The callback after completion.
