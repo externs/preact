@@ -2,8 +2,8 @@
 
   <constructor name="ComponentConstructor" 
     desc="A component that extends preact.Component to set default properties. https://git.io/fjHoZ"
-    type="function(new: preact.Component)" >
-    <!-- extends="{ defaultProps: !Object }" -->
+    type="function(new: preact.Component)" extends="{ defaultProps: !Object, getDerivedStateFromProps: (props: !Object, state: !Object) => !Object }">
+    
     <prop static name="defaultProps">props</prop>
     <!-- a) static does not work on typedef in typescript because only Object is allow -->
     <!-- this can be solved with & -->

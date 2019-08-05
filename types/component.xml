@@ -13,10 +13,13 @@
     <prop alias="__x" type="boolean" name="_disable" opt>
       Turns off stateful re-rendering.
     </prop>
+    <prop string name="displayName" opt>
+      The display name.
+    </prop>
 
-    <prop type="!Object" name="context"/>
-    <prop type="!Object" name="props"/>
-    <prop type="!Object" name="state"/>
+    <prop type="!Object" name="context">The context.</prop>
+    <prop type="!Object" name="props">The properties.</prop>
+    <prop type="!Object" name="state">The state.</prop>
 
     <fn name="setState">
       <arg type="!Object" name="state">The state.</arg>

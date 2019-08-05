@@ -122,6 +122,11 @@ preact.ComponentConstructor
  * @type {!Object}
  */
 preact.ComponentConstructor.defaultProps
+/**
+ * Static get derived.
+ * @type {function(!Object, !Object): !Object}
+ */
+preact.ComponentConstructor.getDerivedStateFromProps
 
 /* typal types/component.xml */
 /**
@@ -142,14 +147,17 @@ preact.Component.prototype._disable
  */
 preact.Component.prototype.__x
 /**
+ * The context.
  * @type {!Object}
  */
 preact.Component.prototype.context
 /**
+ * The properties.
  * @type {!Object}
  */
 preact.Component.prototype.props
 /**
+ * The state.
  * @type {!Object}
  */
 preact.Component.prototype.state

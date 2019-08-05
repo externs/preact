@@ -10,11 +10,12 @@
     "spec": "yarn t test/spec",
     "mask": "yarn t test/mask",
     "test-build": "ALAMODE_ENV=test-build yarn test",
+    "wiki": "NODE_DEBUG=doc doc wiki -W ../preact.wiki -n preact",
     "lint": "eslint .",
     "doc": "NODE_DEBUG=doc doc -o README.md",
     "b": "alamode src -o build -s",
     "d": "yarn-s d1 externs",
-    "d1": "typal src/index.js src",
+    "d1": "typal build/index.js",
     "externs": "typal types/externs.js -e",
     "build": "yarn-s d b doc",
     "e": "alanode"

@@ -35,6 +35,23 @@
       "skipFiles": [
         "<node_internals>/**/*.js"
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Documentary",
+      "program": "${workspaceFolder}/node_modules/.bin/doc",
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_DEBUG":" doc"
+      },
+      "args": [
+        "wiki", "-W","../preact.wiki"
+      ],
+      "sourceMaps": false,
+      "skipFiles": [
+        "<node_internals>/**/*.js"
+      ]
     }
   ]
 }

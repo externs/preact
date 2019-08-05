@@ -50,7 +50,8 @@ const {
  * @prop {string|number} [key] The key used to identify this VNode in a list.
  * @prop {Object} attributes The properties of this VNode.
  * @typedef {preact.ComponentConstructor} ComponentConstructor `＠constructor` A component that extends preact.Component to set default properties. https://git.io/fjHoZ
- * @typedef {function(new: preact.Component)} preact.ComponentConstructor `＠constructor` A component that extends preact.Component to set default properties. https://git.io/fjHoZ
+ * @typedef {{ defaultProps: !Object, getDerivedStateFromProps: (props: !Object, state: !Object) => !Object } & preact.$ComponentConstructor} preact.ComponentConstructor `＠constructor` A component that extends preact.Component to set default properties. https://git.io/fjHoZ
+ * @typedef {function(new: preact.Component)} preact.$ComponentConstructor `＠constructor` A component that extends preact.Component to set default properties. https://git.io/fjHoZ
  * @prop {*} defaultProps props
  */
 
@@ -60,9 +61,10 @@ const {
  * @typedef {Object} preact.Component `＠constructor` Preact component.
  * @prop {boolean} [_disable] Turns off stateful re-rendering.
  * @prop {boolean} [__x] An alias for `_disable`.
- * @prop {!Object} context
- * @prop {!Object} props
- * @prop {!Object} state
+ * @prop {string} [displayName] The display name.
+ * @prop {!Object} context The context.
+ * @prop {!Object} props The properties.
+ * @prop {!Object} state The state.
  * @prop {(state: !Object, callback?: function(): void) => void} setState
  * @prop {(callback?: function(): void) => void} forceUpdate
  * @prop {(props?: !Object, state?: !Object, context?: !Object) => preact.VNode} render
