@@ -1,14 +1,18 @@
 <types namespace="preact">
 
-  <interface name="_Component" 
-    desc="A component that extends preact.Component to set default properties. https://git.io/fjHoZ">
-    <prop type="!Object" name="defaultProps">
-      The properties that will be assigned on the component by _Preact_ when constructing it.
-    </prop>
-  </interface>
+  <constructor name="ComponentConstructor" 
+    desc="A component that extends preact.Component to set default properties. https://git.io/fjHoZ"
+    type="function(new: preact.Component)" >
+    <!-- extends="{ defaultProps: !Object }" -->
+    <prop static name="defaultProps">props</prop>
+    <!-- a) static does not work on typedef in typescript because only Object is allow -->
+    <!-- this can be solved with & -->
+    <!-- b) in externs, static does not work either as @typedef {function(new: preact.Component)}
+    is generated without prototype definition. add manually -->
+  </constructor>
 
-  <constructor name="VNode" desc="Virtual DOM Node.">
-    <prop name="nodeName" type="string|preact._Component">
+  <interface name="VNode" desc="Virtual DOM Node.">
+    <prop name="nodeName" type="string|preact.ComponentConstructor|Function">
       The string of the DOM node to create or Component constructor to render.
     </prop>
     <prop name="children" type="!Array<!preact.VNode|string>">
@@ -20,6 +24,6 @@
     <prop name="attributes" type="Object">
       The properties of this VNode.
     </prop>
-  </constructor>
+  </interface>
 
 </types>

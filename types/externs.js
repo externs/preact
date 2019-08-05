@@ -87,23 +87,13 @@ preact.options.prototype.beforeUnmount = function(component) {}
 
 /* typal types/vnode.xml */
 /**
- * A component that extends preact.Component to set default properties. https://git.io/fjHoZ
- * @interface
- */
-preact._Component = function() {}
-/**
- * The properties that will be assigned on the component by _Preact_ when constructing it.
- * @type {!Object}
- */
-preact._Component.prototype.defaultProps
-/**
  * Virtual DOM Node.
- * @constructor
+ * @interface
  */
 preact.VNode = function() {}
 /**
  * The string of the DOM node to create or Component constructor to render.
- * @type {string|preact._Component}
+ * @type {string|preact.ComponentConstructor|Function}
  */
 preact.VNode.prototype.nodeName
 /**
@@ -121,6 +111,17 @@ preact.VNode.prototype.key
  * @type {Object}
  */
 preact.VNode.prototype.attributes
+/**
+ * A component that extends preact.Component to set default properties. https://git.io/fjHoZ
+ * @typedef {function(new: preact.Component)}
+ */
+preact.ComponentConstructor
+
+/**
+ * Static default property.
+ * @type {!Object}
+ */
+preact.ComponentConstructor.defaultProps
 
 /* typal types/component.xml */
 /**
@@ -130,6 +131,16 @@ preact.VNode.prototype.attributes
  * @constructor
  */
 preact.Component = function(props, context) {}
+/**
+ * Turns off stateful re-rendering.
+ * @type {boolean|undefined}
+ */
+preact.Component.prototype._disable
+/**
+ * An alias for `_disable`.
+ * @type {boolean|undefined}
+ */
+preact.Component.prototype.__x
 /**
  * @type {!Object}
  */

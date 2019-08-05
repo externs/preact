@@ -5,6 +5,14 @@
     <arg type="!Object" name="context" opt>
       The initial context from parent components' getChildContext.
     </arg>
+<!-- 
+    prop static name="defaultProps" opt>
+      The default properties to instantiate on construction.
+    </prop> -->
+
+    <prop alias="__x" type="boolean" name="_disable" opt>
+      Turns off stateful re-rendering.
+    </prop>
 
     <prop type="!Object" name="context"/>
     <prop type="!Object" name="props"/>

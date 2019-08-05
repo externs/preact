@@ -31,6 +31,7 @@
       "args": [
         "example"
       ],
+      "sourceMaps": false,
       "skipFiles": [
         "<node_internals>/**/*.js"
       ]

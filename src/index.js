@@ -53,21 +53,23 @@ export {
 
 /* typal types/vnode.xml namespace */
 /**
- * @typedef {preact._Component} _Component `＠interface` A component that extends preact.Component to set default properties. https://git.io/fjHoZ
- * @typedef {Object} preact._Component `＠interface` A component that extends preact.Component to set default properties. https://git.io/fjHoZ
- * @prop {!Object} defaultProps The properties that will be assigned on the component by _Preact_ when constructing it.
- * @typedef {preact.VNode} VNode `＠constructor` Virtual DOM Node.
- * @typedef {Object} preact.VNode `＠constructor` Virtual DOM Node.
- * @prop {string|preact._Component} nodeName The string of the DOM node to create or Component constructor to render.
+ * @typedef {preact.VNode} VNode `＠interface` Virtual DOM Node.
+ * @typedef {Object} preact.VNode `＠interface` Virtual DOM Node.
+ * @prop {string|preact.ComponentConstructor|Function} nodeName The string of the DOM node to create or Component constructor to render.
  * @prop {!Array<!preact.VNode|string>} children The children of node.
  * @prop {string|number} [key] The key used to identify this VNode in a list.
  * @prop {Object} attributes The properties of this VNode.
+ * @typedef {preact.ComponentConstructor} ComponentConstructor `＠constructor` A component that extends preact.Component to set default properties. https://git.io/fjHoZ
+ * @typedef {function(new: preact.Component)} preact.ComponentConstructor `＠constructor` A component that extends preact.Component to set default properties. https://git.io/fjHoZ
+ * @prop {*} defaultProps props
  */
 
 /* typal types/component.xml namespace */
 /**
  * @typedef {preact.Component} Component `＠constructor` Preact component.
  * @typedef {Object} preact.Component `＠constructor` Preact component.
+ * @prop {boolean} [_disable] Turns off stateful re-rendering.
+ * @prop {boolean} [__x] An alias for `_disable`.
  * @prop {!Object} context
  * @prop {!Object} props
  * @prop {!Object} state

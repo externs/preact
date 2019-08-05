@@ -22,7 +22,7 @@
   "files": [
     "build",
     "src",
-    "types/externs.js"
+    "types"
   ],
   "externs": "types/externs.js",
   "repository": {
