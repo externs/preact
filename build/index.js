@@ -45,8 +45,8 @@ const {
 /**
  * @typedef {preact.VNode} VNode `＠interface` Virtual DOM Node.
  * @typedef {Object} preact.VNode `＠interface` Virtual DOM Node.
- * @prop {string|preact.ComponentConstructor|Function} nodeName The string of the DOM node to create or Component constructor to render.
- * @prop {!Array<!preact.VNode|string>} children The children of node.
+ * @prop {string|function(new: preact.Component)|Function} nodeName The string of the DOM node to create or Component constructor to render.
+ * @prop {!Array<preact.VNode|string|boolean|number|undefined>} children The children of node. Can be scalar values (string, number, boolean, null, undefined, etc), more Virtual DOM elements, or infinitely nested arrays of the above.
  * @prop {string|number} [key] The key used to identify this VNode in a list.
  * @prop {Object} attributes The properties of this VNode.
  */

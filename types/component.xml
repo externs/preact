@@ -20,6 +20,7 @@
     <fn static name="getDerivedStateFromProps" opt return="!Object">
       <arg name="props" type="!Object">Component properties.</arg>
       <arg name="state" type="!Object">Component plain state.</arg>
+      The function to compute the state from properties.
     </fn>
 
     <prop type="!Object" name="context">The context.</prop>

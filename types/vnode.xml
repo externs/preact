@@ -6,11 +6,11 @@
   is generated without prototype definition. add manually -->
 
   <interface name="VNode" desc="Virtual DOM Node.">
-    <prop name="nodeName" type="string|preact.ComponentConstructor|Function">
+    <prop name="nodeName" type="string|function(new: preact.Component)|Function">
       The string of the DOM node to create or Component constructor to render.
     </prop>
-    <prop name="children" type="!Array<!preact.VNode|string>">
-      The children of node.
+    <prop name="children" type="!Array<preact.VNode|string|boolean|number|undefined>">
+      The children of node. Can be scalar values (string, number, boolean, null, undefined, etc), more Virtual DOM elements, or infinitely nested arrays of the above.
     </prop>
     <prop name="key" opt type="string|number">
       The key used to identify this VNode in a list.

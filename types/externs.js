@@ -93,12 +93,12 @@ preact.options.prototype.beforeUnmount = function(component) {}
 preact.VNode = function() {}
 /**
  * The string of the DOM node to create or Component constructor to render.
- * @type {string|preact.ComponentConstructor|Function}
+ * @type {string|function(new: preact.Component)|Function}
  */
 preact.VNode.prototype.nodeName
 /**
- * The children of node.
- * @type {!Array<!preact.VNode|string>}
+ * The children of node. Can be scalar values (string, number, boolean, null, undefined, etc), more Virtual DOM elements, or infinitely nested arrays of the above.
+ * @type {!Array<preact.VNode|string|boolean|number|undefined>}
  */
 preact.VNode.prototype.children
 /**
@@ -111,17 +111,6 @@ preact.VNode.prototype.key
  * @type {Object}
  */
 preact.VNode.prototype.attributes
-
-/**
- * Static default property.
- * @type {!Object}
- */
-preact.ComponentConstructor.defaultProps
-/**
- * Static get derived.
- * @type {function(!Object, !Object): !Object}
- */
-preact.ComponentConstructor.getDerivedStateFromProps
 
 /* typal types/component.xml */
 /**
@@ -162,6 +151,7 @@ preact.Component.prototype.props
  */
 preact.Component.prototype.state
 /**
+ * The function to compute the state from properties.
  * @type {(function(!Object,!Object): !Object)|undefined}
  */
 preact.Component.getDerivedStateFromProps = function(props, state) {}
