@@ -57,11 +57,9 @@ const {
  * @typedef {Object} preact.Component `＠constructor` Preact component.
  * @prop {boolean} [_disable] Turns off stateful re-rendering.
  * @prop {boolean} [__x] An alias for `_disable`.
- * @prop {!Object} [defaultProps] Properties that will be assigned upon construction of the component.
  * @prop {!Object} context The context.
  * @prop {!Object} props The properties.
  * @prop {!Object} state The state.
- * @prop {(props: !Object, state: !Object) => !Object} [getDerivedStateFromProps]
  * @prop {(state: !Object, callback?: function(): void) => void} setState
  * @prop {(callback?: function(): void) => void} forceUpdate
  * @prop {(props?: !Object, state?: !Object, context?: !Object) => preact.VNode} render
