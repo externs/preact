@@ -10,8 +10,7 @@ The actual externs are found in the `type/externs.js` file which is referenced b
 
 %~%
 
-```## preact
-```
+## preact
 
 The entry module, `src/index.js` of this package destructures the properties available on preact global variable, and exports them.
 

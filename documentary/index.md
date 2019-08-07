@@ -8,6 +8,8 @@
 yarn add @externs/preact
 ```
 
+<kbd>📖 [Read Types Documentation](../../wiki)</kbd>
+
 %EXAMPLE: types/externs%
 
 ## Table Of Contents

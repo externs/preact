@@ -8,6 +8,8 @@
 yarn add @externs/preact
 ```
 
+<kbd>📖 [Read Types Documentation](../../wiki)</kbd>
+
 ```js
 /**
  * @fileoverview
@@ -232,7 +234,7 @@ preact.Component.prototype.componentDidUpdate = function(prevProps, prevState, p
 
 - [Table Of Contents](#table-of-contents)
 - [API](#api)
-- [`preact()`](#preact-void)
+- [preact](#preact)
 - [Copyright](#copyright)
 
 <p align="center"><a href="#table-of-contents">
@@ -253,7 +255,7 @@ The actual externs are found in the `type/externs.js` file which is referenced b
   <img src="/.documentary/section-breaks/1.svg?sanitize=true">
 </a></p>
 
-## `preact(): void`
+## preact
 
 The entry module, `src/index.js` of this package destructures the properties available on preact global variable, and exports them.
 
