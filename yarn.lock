@@ -61,16 +61,16 @@ competent@^1.7.0:
     restream "^3.7.1"
     rexml "^2.0.0"
 
-documentary@^1.30.2:
-  version "1.30.2"
-  resolved "https://registry.yarnpkg.com/documentary/-/documentary-1.30.2.tgz#de3aa1e165026fa77112581ca4026a6137a0d402"
-  integrity sha512-cJjfZ0vBwDa4uwxtFZt83oP+oiJ0Hip7+06qomlFt7hMje2rJ90ul2iNXpdhrkdkwgvjjls3N8UbJVvbpTlrFQ==
+documentary@^1.30.3:
+  version "1.30.3"
+  resolved "https://registry.yarnpkg.com/documentary/-/documentary-1.30.3.tgz#f1eb3a5e3ed92fbe59613f935cec704f36aeab3c"
+  integrity sha512-PFmPpVQtcCdehTJvYakUlSLyeDNZ013M50fEMaQV9qLfa/VFbuh9k/EtZfCR7nXVdehsfqKDAn4S4deiUpJm5g==
   dependencies:
     "@depack/render" "^1.2.1"
     alamode "^2.4.0"
     competent "^1.7.0"
     preact "8.5.0"
-    typal "^1.19.2"
+    typal "^1.21.0"
 
 erotic@^2.1.0:
   version "2.1.1"
@@ -116,10 +116,10 @@ spawncommand@1.1.0:
   dependencies:
     catchment "^1.0.0"
 
-typal@^1.19.2, typal@^1.20.2:
-  version "1.20.2"
-  resolved "https://registry.yarnpkg.com/typal/-/typal-1.20.2.tgz#243116ab796f51c7fc0eb7d87e8a63e548919b41"
-  integrity sha512-8WUlHnCTr1kLUIScYpVgZcd0ZQYC8Lutg1eNTscVZcbaPwKFIguCMDat3PWg8knKtrh9+8W4lF4Uw3AlJSDnSQ==
+typal@^1.21.0:
+  version "1.21.0"
+  resolved "https://registry.yarnpkg.com/typal/-/typal-1.21.0.tgz#f97fd5eb91bd3d2ee89384d88aeda1e3c6fd9e28"
+  integrity sha512-Vg2w+iUbX7HNoEDpamyqYLfHNt0/Z7xLgU9SaZoab2Kj2WqX8a2w30v4ayeznsEuCzgSmquGftXi6d5ulEvVPw==
   dependencies:
     "@typedefs/parser" "^1.3.2"
     "@wrote/read" "^1.0.4"
