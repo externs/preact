@@ -1,14 +1,10 @@
 <types namespace="preact">
 
-  <constructor name="Component" desc="Preact component.">
+  <constructor name="Component" desc="A base class that is usually subclassed to create stateful _Preact_ components.">
     <arg type="!Object" name="props" opt>The initial component props.</arg>
     <arg type="!Object" name="context" opt>
       The initial context from parent components' getChildContext.
     </arg>
-<!-- 
-    prop static name="defaultProps" opt>
-      The default properties to instantiate on construction.
-    </prop> -->
 
     <prop alias="__x" type="boolean" name="_disable" opt>
       Turns off stateful re-rendering.
@@ -48,12 +44,20 @@
       <arg type="!Object" name="context" opt>
         Component context.
       </arg>
+      The `render()` function is required for all components. It can inspect the props and state of the component, and should return a _Preact_ element or `null`.
     </fn>
-    <fn name="componentWillMount" />
-    <fn name="componentDidMount" />
-    <fn name="componentWillUnmount" />
+    <fn name="componentWillMount">
+      Called before the component gets mounted to the DOM.
+    </fn>
+    <fn name="componentDidMount">
+      Called after the component gets mounted to the DOM.
+    </fn>
+    <fn name="componentWillUnmount">
+      Called prior to removal from the DOM.
+    </fn>
 
-    <fn name="getChildContext" return="!Object" />
+    <fn name="getChildContext" return="!Object">
+    </fn>
 
     <fn name="componentWillReceiveProps">
       <arg type="!Object" name="nextProps" opt>
@@ -62,6 +66,7 @@
       <arg type="!Object" name="nextContext" opt>
         New context.
       </arg>
+      Called before new props get accepted.
     </fn>
     <fn name="shouldComponentUpdate" return="boolean">
       <arg type="!Object" name="nextProps" opt>
@@ -73,6 +78,7 @@
       <arg type="!Object" name="nextContext" opt>
         New context.
       </arg>
+      Called before `render()`. Should return `false` to skip render.
     </fn>
     <fn name="componentWillUpdate">
       <arg type="!Object" name="nextProps" opt>
@@ -84,6 +90,7 @@
       <arg type="!Object" name="nextContext" opt>
         New context.
       </arg>
+      Called before `render()`.
     </fn>
     <fn name="componentDidUpdate">
       <arg type="!Object" name="prevProps" opt>
@@ -95,6 +102,7 @@
       <arg type="!Object" name="prevContext" opt>
         Previous context.
       </arg>
+      Called after `render()`.
     </fn>
 
   </constructor>

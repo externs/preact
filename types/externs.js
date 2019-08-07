@@ -114,7 +114,7 @@ preact.VNode.prototype.attributes
 
 /* typal types/component.xml */
 /**
- * Preact component.
+ * A base class that is usually subclassed to create stateful _Preact_ components.
  * @param {!Object=} [props] The initial component props.
  * @param {!Object=} [context] The initial context from parent components' getChildContext.
  * @constructor
@@ -165,6 +165,7 @@ preact.Component.prototype.setState = function(state, callback) {}
  */
 preact.Component.prototype.forceUpdate = function(callback) {}
 /**
+ * The `render()` function is required for all components. It can inspect the props and state of the component, and should return a _Preact_ element or `null`.
  * @param {!Object=} [props] Component properties.
  * @param {!Object=} [state] Component state.
  * @param {!Object=} [context] Component context.
@@ -172,12 +173,15 @@ preact.Component.prototype.forceUpdate = function(callback) {}
  */
 preact.Component.prototype.render = function(props, state, context) {}
 /**
+ * Called before the component gets mounted to the DOM.
  */
 preact.Component.prototype.componentWillMount = function() {}
 /**
+ * Called after the component gets mounted to the DOM.
  */
 preact.Component.prototype.componentDidMount = function() {}
 /**
+ * Called prior to removal from the DOM.
  */
 preact.Component.prototype.componentWillUnmount = function() {}
 /**
@@ -185,11 +189,13 @@ preact.Component.prototype.componentWillUnmount = function() {}
  */
 preact.Component.prototype.getChildContext = function() {}
 /**
+ * Called before new props get accepted.
  * @param {!Object=} [nextProps] New properties.
  * @param {!Object=} [nextContext] New context.
  */
 preact.Component.prototype.componentWillReceiveProps = function(nextProps, nextContext) {}
 /**
+ * Called before `render()`. Should return `false` to skip render.
  * @param {!Object=} [nextProps] New properties.
  * @param {!Object=} [nextState] New state.
  * @param {!Object=} [nextContext] New context.
@@ -197,12 +203,14 @@ preact.Component.prototype.componentWillReceiveProps = function(nextProps, nextC
  */
 preact.Component.prototype.shouldComponentUpdate = function(nextProps, nextState, nextContext) {}
 /**
+ * Called before `render()`.
  * @param {!Object=} [nextProps] New properties.
  * @param {!Object=} [nextState] New state.
  * @param {!Object=} [nextContext] New context.
  */
 preact.Component.prototype.componentWillUpdate = function(nextProps, nextState, nextContext) {}
 /**
+ * Called after `render()`.
  * @param {!Object=} [prevProps] Previous properties.
  * @param {!Object=} [prevState] Previous state.
  * @param {!Object=} [prevContext] Previous context.

@@ -40,7 +40,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Documentary",
-      "program": "${workspaceFolder}/node_modules/.bin/doc",
+      "program": "${workspaceFolder}/node_modules/documentary/src/bin/index.js",
       "console": "integratedTerminal",
       "env": {
         "NODE_DEBUG":" doc"
