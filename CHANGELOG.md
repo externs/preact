@@ -1,3 +1,10 @@
+## 7 August 2019
+
+### [1.2.0](https://github.com/dpck/preact/compare/v1.1.0...v1.2.0)
+
+- [doc] Document types in _Wiki_.
+- [fix] Some fixes to types, define static properties on _Component_.
+
 ## 14 May 2019
 
 ### [1.1.0](https://github.com/dpck/preact/compare/v1.0.0...v1.1.0)
