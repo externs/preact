@@ -1,3 +1,4 @@
+/* start example */
 export default preact
 
 const {
@@ -21,6 +22,7 @@ export {
   rerender,
   options,
 }
+/* end example */
 
 /* typal types/methods.xml namespace */
 

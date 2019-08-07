@@ -47,9 +47,8 @@ preact.render = function(vnode, parent, merge) {}
  */
 preact.rerender = function() {}
 
-// because each option is optional, they are defined as types and not functions
-// to allow "|undefined".
-// todo typal: write constructor still ( = function(arg,arg2) {})
+// Because each option is optional, they are defined with `@type` and 
+// not as functions to allow "{type}|undefined".
 /* typal types/options.xml */
 /**
  * Options for Preact.
