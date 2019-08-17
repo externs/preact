@@ -1,3 +1,9 @@
+## 17 August 2019
+
+### [1.2.1](https://github.com/dpck/preact/compare/v1.2.0...v1.2.1)
+
+- [externs] Correct externs for `h` and `cloneElement` allowing to pass primitives in _...args_.
+
 ## 7 August 2019
 
 ### [1.2.0](https://github.com/dpck/preact/compare/v1.1.0...v1.2.0)
