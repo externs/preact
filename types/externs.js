@@ -60,11 +60,11 @@ preact.options
  */
 preact.options.prototype.syncComponentUpdates
 /**
- * @type {(function(function(): void): void)|undefined}
+ * @type {(function(function(): void))|undefined}
  */
 preact.options.prototype.debounceRendering = function(callback) {}
 /**
- * @type {(function(!preact.VNode): void)|undefined}
+ * @type {(function(!preact.VNode))|undefined}
  */
 preact.options.prototype.vnode = function(vnode) {}
 /**
@@ -72,15 +72,15 @@ preact.options.prototype.vnode = function(vnode) {}
  */
 preact.options.prototype.event = function(event) {}
 /**
- * @type {(function(!preact.Component): void)|undefined}
+ * @type {(function(!preact.Component))|undefined}
  */
 preact.options.prototype.afterMount = function(component) {}
 /**
- * @type {(function(!preact.Component): void)|undefined}
+ * @type {(function(!preact.Component))|undefined}
  */
 preact.options.prototype.afterUpdate = function(component) {}
 /**
- * @type {(function(!preact.Component): void)|undefined}
+ * @type {(function(!preact.Component))|undefined}
  */
 preact.options.prototype.beforeUnmount = function(component) {}
 
@@ -120,6 +120,16 @@ preact.VNode.prototype.attributes
  */
 preact.Component = function(props, context) {}
 /**
+ * Properties that will be assigned upon construction of the component.
+ * @type {(!Object)|undefined}
+ */
+preact.Component.defaultProps
+/**
+ * The function to compute the state from properties.
+ * @type {(function(!Object,!Object): !Object)|undefined}
+ */
+preact.Component.getDerivedStateFromProps = function(props, state) {}
+/**
  * Turns off stateful re-rendering.
  * @type {boolean|undefined}
  */
@@ -129,11 +139,6 @@ preact.Component.prototype._disable
  * @type {boolean|undefined}
  */
 preact.Component.prototype.__x
-/**
- * Properties that will be assigned upon construction of the component.
- * @type {(!Object)|undefined}
- */
-preact.Component.defaultProps
 /**
  * The context.
  * @type {!Object}
@@ -149,11 +154,6 @@ preact.Component.prototype.props
  * @type {!Object}
  */
 preact.Component.prototype.state
-/**
- * The function to compute the state from properties.
- * @type {(function(!Object,!Object): !Object)|undefined}
- */
-preact.Component.getDerivedStateFromProps = function(props, state) {}
 /**
  * @param {!Object} state The state.
  * @param {function(): void=} [callback] The callback after completion.

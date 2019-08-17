@@ -42,9 +42,9 @@
   "homepage": "https://github.com/dpck/preact#readme",
   "devDependencies": {
     "alamode": "^2.4.0",
-    "documentary": "^1.30.3",
+    "documentary": "^1.32.1",
     "eslint-config-artdeco": "1.0.1",
-    "typal": "^1.21.0",
+    "typal": "^1.22.0",
     "yarn-s": "1.1.0",
     "zoroaster": "^4.1.1-alpha"
   }

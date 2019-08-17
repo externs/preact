@@ -33,12 +33,12 @@ const {
  * @typedef {preact.options} options `＠record` Options for Preact.
  * @typedef {Object} preact.options `＠record` Options for Preact.
  * @prop {boolean} [syncComponentUpdates]
- * @prop {(callback: function(): void) => void} [debounceRendering]
- * @prop {(vnode: !preact.VNode) => void} [vnode]
+ * @prop {(callback: function(): void) => ?} [debounceRendering]
+ * @prop {(vnode: !preact.VNode) => ?} [vnode]
  * @prop {(event: !Event) => !Event} [event]
- * @prop {(component: !preact.Component) => void} [afterMount]
- * @prop {(component: !preact.Component) => void} [afterUpdate]
- * @prop {(component: !preact.Component) => void} [beforeUnmount]
+ * @prop {(component: !preact.Component) => ?} [afterMount]
+ * @prop {(component: !preact.Component) => ?} [afterUpdate]
+ * @prop {(component: !preact.Component) => ?} [beforeUnmount]
  */
 
 /* typal types/vnode.xml namespace */
@@ -55,22 +55,23 @@ const {
 /**
  * @typedef {preact.Component} Component `＠constructor` A base class that is usually subclassed to create stateful _Preact_ components.
  * @typedef {Object} preact.Component `＠constructor` A base class that is usually subclassed to create stateful _Preact_ components.
+ * @prop {(props?: !Object, context?: !Object) => preact.Component} constructor Constructor method.
  * @prop {boolean} [_disable] Turns off stateful re-rendering.
  * @prop {boolean} [__x] An alias for `_disable`.
  * @prop {!Object} context The context.
  * @prop {!Object} props The properties.
  * @prop {!Object} state The state.
- * @prop {(state: !Object, callback?: function(): void) => void} setState
- * @prop {(callback?: function(): void) => void} forceUpdate
+ * @prop {(state: !Object, callback?: function(): void) => ?} setState
+ * @prop {(callback?: function(): void) => ?} forceUpdate
  * @prop {(props?: !Object, state?: !Object, context?: !Object) => preact.VNode} render The `render()` function is required for all components. It can inspect the props and state of the component, and should return a _Preact_ element or `null`.
- * @prop {() => void} componentWillMount Called before the component gets mounted to the DOM.
- * @prop {() => void} componentDidMount Called after the component gets mounted to the DOM.
- * @prop {() => void} componentWillUnmount Called prior to removal from the DOM.
+ * @prop {() => ?} componentWillMount Called before the component gets mounted to the DOM.
+ * @prop {() => ?} componentDidMount Called after the component gets mounted to the DOM.
+ * @prop {() => ?} componentWillUnmount Called prior to removal from the DOM.
  * @prop {() => !Object} getChildContext
- * @prop {(nextProps?: !Object, nextContext?: !Object) => void} componentWillReceiveProps Called before new props get accepted.
+ * @prop {(nextProps?: !Object, nextContext?: !Object) => ?} componentWillReceiveProps Called before new props get accepted.
  * @prop {(nextProps?: !Object, nextState?: !Object, nextContext?: !Object) => boolean} shouldComponentUpdate Called before `render()`. Should return `false` to skip render.
- * @prop {(nextProps?: !Object, nextState?: !Object, nextContext?: !Object) => void} componentWillUpdate Called before `render()`.
- * @prop {(prevProps?: !Object, prevState?: !Object, prevContext?: !Object) => void} componentDidUpdate Called after `render()`.
+ * @prop {(nextProps?: !Object, nextState?: !Object, nextContext?: !Object) => ?} componentWillUpdate Called before `render()`.
+ * @prop {(prevProps?: !Object, prevState?: !Object, prevContext?: !Object) => ?} componentDidUpdate Called after `render()`.
  */
 
 
