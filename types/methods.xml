@@ -7,8 +7,8 @@
     <arg name="attributes" type="Object" opt>
       Any attributes/props to set on the created element.
     </arg>
-    <arg type="!(preact.VNode|Array<!preact.VNode>)" name="...args">
-      Additional arguments are taken to be children to append. Can be infinitely nested Arrays.  
+    <arg type="!(preact.VNode|Array<!preact.VNode|string|null|boolean|number|undefined>|string|null|boolean|number|undefined)" name="...args">
+      Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
     </arg>
   </method>
 
@@ -19,7 +19,7 @@
     <arg name="props" type="Object" opt>
       Attributes/props to add when cloning.
     </arg>
-    <arg type="!(preact.VNode|Array<!preact.VNode>)" name="...args">
+    <arg type="!(preact.VNode|Array<!preact.VNode|string|null|boolean|number|undefined>|string|null|boolean|number|undefined)" name="...args">
       Any additional arguments will be used as replacement children.
     </arg>
   </method>

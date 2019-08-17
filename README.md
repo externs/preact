@@ -23,7 +23,7 @@ var preact = {}
  * The pragma (rendering) function.
  * @param {string|!Function} nodeName An element name. Ex: `div`, `a`, `span`, etc.
  * @param {Object=} [attributes] Any attributes/props to set on the created element.
- * @param {...!(preact.VNode|Array<!preact.VNode>)} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
+ * @param {...!(preact.VNode|Array<!preact.VNode|string|null|boolean|number|undefined>|string|null|boolean|number|undefined)} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
  * @return {!preact.VNode}
  */
 preact.h = function(nodeName, attributes, ...args) {}
@@ -31,7 +31,7 @@ preact.h = function(nodeName, attributes, ...args) {}
  * The pragma (rendering) function. Alias of `h`.
  * @param {string|!Function} nodeName An element name. Ex: `div`, `a`, `span`, etc.
  * @param {Object=} [attributes] Any attributes/props to set on the created element.
- * @param {...!(preact.VNode|Array<!preact.VNode>)} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
+ * @param {...!(preact.VNode|Array<!preact.VNode|string|null|boolean|number|undefined>|string|null|boolean|number|undefined)} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
  * @return {!preact.VNode}
  */
 preact.createElement = function(nodeName, attributes, ...args) {}
@@ -39,7 +39,7 @@ preact.createElement = function(nodeName, attributes, ...args) {}
  * Clones the given VNode, optionally adding attributes/props and replacing its children.
  * @param {!preact.VNode} vnode The virtual DOM element to clone.
  * @param {Object=} [props] Attributes/props to add when cloning.
- * @param {...!(preact.VNode|Array<!preact.VNode>)} args Any additional arguments will be used as replacement children.
+ * @param {...!(preact.VNode|Array<!preact.VNode|string|null|boolean|number|undefined>|string|null|boolean|number|undefined)} args Any additional arguments will be used as replacement children.
  * @return {!preact.VNode}
  */
 preact.cloneElement = function(vnode, props, ...args) {}
@@ -73,11 +73,11 @@ preact.options
  */
 preact.options.prototype.syncComponentUpdates
 /**
- * @type {(function(function(): void): void)|undefined}
+ * @type {(function(function(): void))|undefined}
  */
 preact.options.prototype.debounceRendering = function(callback) {}
 /**
- * @type {(function(!preact.VNode): void)|undefined}
+ * @type {(function(!preact.VNode))|undefined}
  */
 preact.options.prototype.vnode = function(vnode) {}
 /**
@@ -85,15 +85,15 @@ preact.options.prototype.vnode = function(vnode) {}
  */
 preact.options.prototype.event = function(event) {}
 /**
- * @type {(function(!preact.Component): void)|undefined}
+ * @type {(function(!preact.Component))|undefined}
  */
 preact.options.prototype.afterMount = function(component) {}
 /**
- * @type {(function(!preact.Component): void)|undefined}
+ * @type {(function(!preact.Component))|undefined}
  */
 preact.options.prototype.afterUpdate = function(component) {}
 /**
- * @type {(function(!preact.Component): void)|undefined}
+ * @type {(function(!preact.Component))|undefined}
  */
 preact.options.prototype.beforeUnmount = function(component) {}
 
@@ -133,6 +133,16 @@ preact.VNode.prototype.attributes
  */
 preact.Component = function(props, context) {}
 /**
+ * Properties that will be assigned upon construction of the component.
+ * @type {(!Object)|undefined}
+ */
+preact.Component.defaultProps
+/**
+ * The function to compute the state from properties.
+ * @type {(function(!Object,!Object): !Object)|undefined}
+ */
+preact.Component.getDerivedStateFromProps = function(props, state) {}
+/**
  * Turns off stateful re-rendering.
  * @type {boolean|undefined}
  */
@@ -142,11 +152,6 @@ preact.Component.prototype._disable
  * @type {boolean|undefined}
  */
 preact.Component.prototype.__x
-/**
- * Properties that will be assigned upon construction of the component.
- * @type {(!Object)|undefined}
- */
-preact.Component.defaultProps
 /**
  * The context.
  * @type {!Object}
@@ -162,11 +167,6 @@ preact.Component.prototype.props
  * @type {!Object}
  */
 preact.Component.prototype.state
-/**
- * The function to compute the state from properties.
- * @type {(function(!Object,!Object): !Object)|undefined}
- */
-preact.Component.getDerivedStateFromProps = function(props, state) {}
 /**
  * @param {!Object} state The state.
  * @param {function(): void=} [callback] The callback after completion.
