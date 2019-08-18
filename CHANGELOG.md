@@ -1,5 +1,9 @@
 ## 18 August 2019
 
+### [1.2.4](https://github.com/dpck/preact/compare/v1.2.3...v1.2.4)
+
+- [externs] Add special `ref` component property.
+
 ### [1.2.3](https://github.com/dpck/preact/compare/v1.2.2...v1.2.3)
 
 - [externs] Add special `dangerouslySetInnerHtml: { __html }` property.
