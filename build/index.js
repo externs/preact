@@ -15,11 +15,11 @@ const {
 /* typal types/methods.xml namespace */
 /**
  * @typedef {preact.h} h The pragma (rendering) function.
- * @typedef {(nodeName: string|!Function, attributes?: Object, ...args: !(preact.VNode|Array<!preact.VNode|string|null|boolean|number|undefined>|string|null|boolean|number|undefined)) => !preact.VNode} preact.h The pragma (rendering) function.
+ * @typedef {(nodeName: string|!Function, attributes?: Object, ...args: preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined) => !preact.VNode} preact.h The pragma (rendering) function.
  * @typedef {preact.createElement} createElement The pragma (rendering) function. Alias of `h`.
- * @typedef {(nodeName: string|!Function, attributes?: Object, ...args: !(preact.VNode|Array<!preact.VNode|string|null|boolean|number|undefined>|string|null|boolean|number|undefined)) => !preact.VNode} preact.createElement The pragma (rendering) function. Alias of `h`.
+ * @typedef {(nodeName: string|!Function, attributes?: Object, ...args: preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined) => !preact.VNode} preact.createElement The pragma (rendering) function. Alias of `h`.
  * @typedef {preact.cloneElement} cloneElement Clones the given VNode, optionally adding attributes/props and replacing its children.
- * @typedef {(vnode: !preact.VNode, props?: Object, ...args: !(preact.VNode|Array<!preact.VNode|string|null|boolean|number|undefined>|string|null|boolean|number|undefined)) => !preact.VNode} preact.cloneElement Clones the given VNode, optionally adding attributes/props and replacing its children.
+ * @typedef {(vnode: !preact.VNode, props?: Object, ...args: preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined) => !preact.VNode} preact.cloneElement Clones the given VNode, optionally adding attributes/props and replacing its children.
  * @typedef {preact.createRef} createRef Just returns an object...?
  * @typedef {() => !Object} preact.createRef Just returns an object...?
  * @typedef {preact.render} render Render JSX into a `parent` Element.
