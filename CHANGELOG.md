@@ -1,5 +1,9 @@
 ## 18 August 2019
 
+### [1.2.3](https://github.com/dpck/preact/compare/v1.2.2...v1.2.3)
+
+- [externs] Add special `dangerouslySetInnerHtml: { __html }` property.
+
 ### [1.2.2](https://github.com/dpck/preact/compare/v1.2.1...v1.2.2)
 
 - [externs] Fix `h` externs allowing `null` and `undefined` in _...args_.

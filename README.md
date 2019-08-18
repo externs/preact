@@ -20,9 +20,19 @@ yarn add @externs/preact
 /** @const */
 var preact = {}
 /**
+ * @extends {Object}
+ * @interface
+ */
+preact.PreactProps = function() {}
+/**
+ * Sets HTML of the node without escaping the contents.
+ * @type {{__html: *}}
+ */
+preact.PreactProps.prototype.dangerouslySetInnerHTML
+/**
  * The pragma (rendering) function.
  * @param {string|!Function} nodeName An element name. Ex: `div`, `a`, `span`, etc.
- * @param {Object=} [attributes] Any attributes/props to set on the created element.
+ * @param {PreactProps=} [attributes] Any attributes/props to set on the created element.
  * @param {...preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
  * @return {!preact.VNode}
  */
@@ -30,7 +40,7 @@ preact.h = function(nodeName, attributes, ...args) {}
 /**
  * The pragma (rendering) function. Alias of `h`.
  * @param {string|!Function} nodeName An element name. Ex: `div`, `a`, `span`, etc.
- * @param {Object=} [attributes] Any attributes/props to set on the created element.
+ * @param {PreactProps=} [attributes] Any attributes/props to set on the created element.
  * @param {...preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
  * @return {!preact.VNode}
  */
@@ -38,7 +48,7 @@ preact.createElement = function(nodeName, attributes, ...args) {}
 /**
  * Clones the given VNode, optionally adding attributes/props and replacing its children.
  * @param {!preact.VNode} vnode The virtual DOM element to clone.
- * @param {Object=} [props] Attributes/props to add when cloning.
+ * @param {PreactProps=} [props] Attributes/props to add when cloning.
  * @param {...preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined} args Any additional arguments will be used as replacement children.
  * @return {!preact.VNode}
  */
