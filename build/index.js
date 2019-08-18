@@ -18,6 +18,7 @@ const {
  * @typedef {Object & preact.$PreactProps} preact.PreactProps `＠interface`
  * @typedef {Object} preact.$PreactProps `＠interface`
  * @prop {{__html: *}} dangerouslySetInnerHTML Sets HTML of the node without escaping the contents.
+ * @prop {function(?)} ref The reference callback for the node.
  * @typedef {preact.h} h The pragma (rendering) function.
  * @typedef {(nodeName: string|!Function, attributes?: PreactProps, ...args: preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined) => !preact.VNode} preact.h The pragma (rendering) function.
  * @typedef {preact.createElement} createElement The pragma (rendering) function. Alias of `h`.

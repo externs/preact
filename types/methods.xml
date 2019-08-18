@@ -4,6 +4,9 @@
     <prop type="{__html: *}" name="dangerouslySetInnerHTML">
       Sets HTML of the node without escaping the contents.
     </prop>
+    <prop type="function(?)" name="ref">
+      The reference callback for the node.
+    </prop>
   </interface>
 
   <method name="h" alias="createElement" desc="The pragma (rendering) function." return="!preact.VNode">

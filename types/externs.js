@@ -17,6 +17,11 @@ preact.PreactProps = function() {}
  */
 preact.PreactProps.prototype.dangerouslySetInnerHTML
 /**
+ * The reference callback for the node.
+ * @type {function(?)}
+ */
+preact.PreactProps.prototype.ref = function() {}
+/**
  * The pragma (rendering) function.
  * @param {string|!Function} nodeName An element name. Ex: `div`, `a`, `span`, etc.
  * @param {PreactProps=} [attributes] Any attributes/props to set on the created element.
