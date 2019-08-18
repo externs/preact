@@ -1,10 +1,16 @@
 <types namespace="preact">
 
+  <interface name="PreactProps" extends="Object">
+    <prop type="{__html: *}" name="dangerouslySetInnerHTML">
+      Sets HTML of the node without escaping the contents.
+    </prop>
+  </interface>
+
   <method name="h" alias="createElement" desc="The pragma (rendering) function." return="!preact.VNode">
     <arg name="nodeName" type="string|!Function">
       An element name. Ex: `div`, `a`, `span`, etc.
     </arg>
-    <arg name="attributes" type="Object" opt>
+    <arg name="attributes" type="PreactProps" opt>
       Any attributes/props to set on the created element.
     </arg>
     <arg type="preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined" name="...args">
@@ -16,7 +22,7 @@
     <arg name="vnode" type="!preact.VNode">
       The virtual DOM element to clone.
     </arg>
-    <arg name="props" type="Object" opt>
+    <arg name="props" type="PreactProps" opt>
       Attributes/props to add when cloning.
     </arg>
     <arg type="preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined" name="...args">
