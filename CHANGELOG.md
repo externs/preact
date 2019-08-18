@@ -1,3 +1,9 @@
+## 18 August 2019
+
+### [1.2.2](https://github.com/dpck/preact/compare/v1.2.1...v1.2.2)
+
+- [externs] Fix `h` externs allowing `null` and `undefined` in _...args_.
+
 ## 17 August 2019
 
 ### [1.2.1](https://github.com/dpck/preact/compare/v1.2.0...v1.2.1)
