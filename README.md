@@ -21,7 +21,7 @@ yarn add @externs/preact
 var preact = {}
 /**
  * @extends {Object}
- * @interface
+ * @constructor
  */
 preact.PreactProps = function() {}
 /**
@@ -37,7 +37,7 @@ preact.PreactProps.prototype.ref = function() {}
 /**
  * The pragma (rendering) function.
  * @param {string|!Function} nodeName An element name. Ex: `div`, `a`, `span`, etc.
- * @param {PreactProps=} [attributes] Any attributes/props to set on the created element.
+ * @param {preact.PreactProps=} [attributes] Any attributes/props to set on the created element.
  * @param {...preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
  * @return {!preact.VNode}
  */
@@ -45,7 +45,7 @@ preact.h = function(nodeName, attributes, ...args) {}
 /**
  * The pragma (rendering) function. Alias of `h`.
  * @param {string|!Function} nodeName An element name. Ex: `div`, `a`, `span`, etc.
- * @param {PreactProps=} [attributes] Any attributes/props to set on the created element.
+ * @param {preact.PreactProps=} [attributes] Any attributes/props to set on the created element.
  * @param {...preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
  * @return {!preact.VNode}
  */
@@ -53,7 +53,7 @@ preact.createElement = function(nodeName, attributes, ...args) {}
 /**
  * Clones the given VNode, optionally adding attributes/props and replacing its children.
  * @param {!preact.VNode} vnode The virtual DOM element to clone.
- * @param {PreactProps=} [props] Attributes/props to add when cloning.
+ * @param {preact.PreactProps=} [props] Attributes/props to add when cloning.
  * @param {...preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined} args Any additional arguments will be used as replacement children.
  * @return {!preact.VNode}
  */
