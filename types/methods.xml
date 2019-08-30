@@ -9,6 +9,12 @@
     </prop>
   </constructor>
 
+  <type
+    name="AcceptedChild"
+    type="preact.VNode|string|boolean|number|undefined"
+    desc="A child node that can be passed to some methods.">
+  </type>
+
   <method name="h" alias="createElement" desc="The pragma (rendering) function." return="!preact.VNode">
     <arg name="nodeName" type="string|!Function">
       An element name. Ex: `div`, `a`, `span`, etc.
@@ -16,7 +22,7 @@
     <arg name="attributes" type="preact.PreactProps" opt>
       Any attributes/props to set on the created element.
     </arg>
-    <arg type="preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined" name="...args">
+    <arg type="preact.AcceptedChild|Array<preact.AcceptedChild>" name="...args">
       Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
     </arg>
   </method>
@@ -28,7 +34,7 @@
     <arg name="props" type="preact.PreactProps" opt>
       Attributes/props to add when cloning.
     </arg>
-    <arg type="preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined" name="...args">
+    <arg type="preact.AcceptedChild|Array<preact.AcceptedChild>" name="...args">
       Any additional arguments will be used as replacement children.
     </arg>
   </method>

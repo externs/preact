@@ -35,10 +35,15 @@ preact.PreactProps.prototype.dangerouslySetInnerHTML
  */
 preact.PreactProps.prototype.ref = function() {}
 /**
+ * A child node that can be passed to some methods.
+ * @typedef {preact.VNode|string|boolean|number|undefined}
+ */
+preact.AcceptedChild
+/**
  * The pragma (rendering) function.
  * @param {string|!Function} nodeName An element name. Ex: `div`, `a`, `span`, etc.
  * @param {preact.PreactProps=} [attributes] Any attributes/props to set on the created element.
- * @param {...preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
+ * @param {...preact.AcceptedChild|Array<preact.AcceptedChild>} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
  * @return {!preact.VNode}
  */
 preact.h = function(nodeName, attributes, ...args) {}
@@ -46,7 +51,7 @@ preact.h = function(nodeName, attributes, ...args) {}
  * The pragma (rendering) function. Alias of `h`.
  * @param {string|!Function} nodeName An element name. Ex: `div`, `a`, `span`, etc.
  * @param {preact.PreactProps=} [attributes] Any attributes/props to set on the created element.
- * @param {...preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
+ * @param {...preact.AcceptedChild|Array<preact.AcceptedChild>} args Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
  * @return {!preact.VNode}
  */
 preact.createElement = function(nodeName, attributes, ...args) {}
@@ -54,7 +59,7 @@ preact.createElement = function(nodeName, attributes, ...args) {}
  * Clones the given VNode, optionally adding attributes/props and replacing its children.
  * @param {!preact.VNode} vnode The virtual DOM element to clone.
  * @param {preact.PreactProps=} [props] Attributes/props to add when cloning.
- * @param {...preact.VNode|Array<preact.VNode|string|boolean|number|undefined>|string|boolean|number|undefined} args Any additional arguments will be used as replacement children.
+ * @param {...preact.AcceptedChild|Array<preact.AcceptedChild>} args Any additional arguments will be used as replacement children.
  * @return {!preact.VNode}
  */
 preact.cloneElement = function(vnode, props, ...args) {}

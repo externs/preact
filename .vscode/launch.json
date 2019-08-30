@@ -46,7 +46,7 @@
         "NODE_DEBUG":" doc"
       },
       "args": [
-        "wiki", "-W","../preact.wiki", "-n", "preact"
+        "wiki", "-W","../preact.wiki", "-n", "preact", "-f", "API"
       ],
       "sourceMaps": false,
       "skipFiles": [
