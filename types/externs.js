@@ -7,20 +7,9 @@
 /** @const */
 var preact = {}
 /**
- * @extends {Object}
- * @constructor
+ * @typedef {{ dangerouslySetInnerHTML: (({__html: *})|undefined), ref: ((function(?))|undefined) }}
  */
-preact.PreactProps = function() {}
-/**
- * Sets HTML of the node without escaping the contents.
- * @type {{__html: *}}
- */
-preact.PreactProps.prototype.dangerouslySetInnerHTML
-/**
- * The reference callback for the node.
- * @type {function(?)}
- */
-preact.PreactProps.prototype.ref = function() {}
+preact.PreactProps
 /**
  * A child node that can be passed to some methods.
  * @typedef {preact.VNode|string|boolean|number|undefined}

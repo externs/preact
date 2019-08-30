@@ -1,5 +1,9 @@
 ## 30 August 2019
 
+### [1.2.6](https://github.com/dpck/preact/compare/v1.2.5...v1.2.6)
+
+- [externs] _PreactProps_ as record.
+
 ### [1.2.5](https://github.com/dpck/preact/compare/v1.2.4...v1.2.5)
 
 - [fix] Fix the _PreactProps_.

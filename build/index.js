@@ -16,11 +16,10 @@ const {
 
 /* typal types/methods.xml namespace */
 /**
- * @typedef {preact.PreactProps} PreactProps `＠constructor`
- * @typedef {Object & preact.$PreactProps} preact.PreactProps `＠constructor`
- * @typedef {Object} preact.$PreactProps `＠constructor`
- * @prop {{__html: *}} dangerouslySetInnerHTML Sets HTML of the node without escaping the contents.
- * @prop {function(?)} ref The reference callback for the node.
+ * @typedef {preact.PreactProps} PreactProps
+ * @typedef {Object} preact.PreactProps
+ * @prop {{__html: *}} [dangerouslySetInnerHTML] Sets HTML of the node without escaping the contents.
+ * @prop {function(?)} [ref] The reference callback for the node.
  * @typedef {preact.AcceptedChild} AcceptedChild A child node that can be passed to some methods.
  * @typedef {preact.VNode|string|boolean|number|undefined} preact.AcceptedChild A child node that can be passed to some methods.
  * @typedef {preact.h} h The pragma (rendering) function.

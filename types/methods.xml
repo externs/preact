@@ -1,13 +1,13 @@
 <types namespace="preact">
 
-  <constructor name="PreactProps" extends="Object">
-    <prop type="{__html: *}" name="dangerouslySetInnerHTML">
+  <type name="PreactProps">
+    <prop type="{__html: *}" name="dangerouslySetInnerHTML" opt>
       Sets HTML of the node without escaping the contents.
     </prop>
-    <prop type="function(?)" name="ref">
+    <prop type="function(?)" name="ref" opt>
       The reference callback for the node.
     </prop>
-  </constructor>
+  </type>
 
   <type
     name="AcceptedChild"
