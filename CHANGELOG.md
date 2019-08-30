@@ -1,3 +1,10 @@
+## 30 August 2019
+
+### [1.2.5](https://github.com/dpck/preact/compare/v1.2.4...v1.2.5)
+
+- [fix] Fix the _PreactProps_.
+- [externs] Add the _AcceptedChild_ type.
+
 ## 18 August 2019
 
 ### [1.2.4](https://github.com/dpck/preact/compare/v1.2.3...v1.2.4)
