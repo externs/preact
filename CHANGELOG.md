@@ -1,3 +1,10 @@
+## 7 November 2019
+
+### [1.2.7](https://github.com/dpck/preact/compare/v1.2.6...v1.2.7)
+
+- [org] Move to the `externs` _GitHub_ org.
+- [fix] Export the build with CommonJS _Preact_.
+
 ## 30 August 2019
 
 ### [1.2.6](https://github.com/dpck/preact/compare/v1.2.5...v1.2.6)

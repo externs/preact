@@ -13,7 +13,6 @@
     "wiki": "NODE_DEBUG=doc doc wiki -W ../preact.wiki -n preact",
     "lint": "eslint .",
     "doc": "NODE_DEBUG=doc doc -o README.md",
-    "b": "alamode src -o build -s",
     "d": "yarn-s d1 externs",
     "d1": "typal build/index.js",
     "externs": "typal types/externs.js -e",
@@ -28,7 +27,7 @@
   "externs": "types/externs.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dpck/preact.git"
+    "url": "git://github.com/externs/preact.git"
   },
   "keywords": [
     "preact",
@@ -37,15 +36,15 @@
   "author": "Anton <anton@adc.sh>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dpck/preact/issues"
+    "url": "https://github.com/externs/preact/issues"
   },
-  "homepage": "https://github.com/dpck/preact#readme",
+  "homepage": "https://www.compiler.page",
   "devDependencies": {
-    "alamode": "^2.4.0",
-    "documentary": "^1.32.1",
+    "alamode": "^3.2.0",
+    "documentary": "^1.34.1",
     "eslint-config-artdeco": "1.0.1",
-    "typal": "^1.22.0",
+    "typal": "^1.22.6",
     "yarn-s": "1.1.0",
-    "zoroaster": "^4.1.1-alpha"
+    "zoroaster": "^4.1.2"
   }
 }

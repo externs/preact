@@ -1,18 +1,4 @@
-/* start example */
-module.exports=preact
-
-const {
-  h,
-  createElement,
-  cloneElement,
-  createRef,
-  Component,
-  render,
-  rerender,
-  options,
-} = preact
-
-/* end example */
+module.exports = require('preact')
 
 /* typal types/methods.xml namespace */
 /**
@@ -81,13 +67,3 @@ const {
  * @prop {(nextProps?: !Object, nextState?: !Object, nextContext?: !Object) => ?} componentWillUpdate Called before `render()`.
  * @prop {(prevProps?: !Object, prevState?: !Object, prevContext?: !Object) => ?} componentDidUpdate Called after `render()`.
  */
-
-
-module.exports.h = h
-module.exports.createElement = createElement
-module.exports.cloneElement = cloneElement
-module.exports.createRef = createRef
-module.exports.Component = Component
-module.exports.render = render
-module.exports.rerender = rerender
-module.exports.options = options
