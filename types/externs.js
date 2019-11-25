@@ -56,7 +56,7 @@ preact.render = function(vnode, parent, merge) {}
  */
 preact.rerender = function() {}
 
-// Because each option is optional, they are defined with `@type` and 
+// Because each option is optional, they are defined with `@type` and
 // not as functions to allow "{type}|undefined".
 /* typal types/options.xml */
 /**

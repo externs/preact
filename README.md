@@ -69,7 +69,7 @@ preact.render = function(vnode, parent, merge) {}
  */
 preact.rerender = function() {}
 
-// Because each option is optional, they are defined with `@type` and 
+// Because each option is optional, they are defined with `@type` and
 // not as functions to allow "{type}|undefined".
 /* typal types/options.xml */
 /**
@@ -271,6 +271,18 @@ The entry module, `src/index.js` of this package destructures the properties ava
 ```js
 export default preact
 
+try {
+  /**
+   * @suppress {const}
+   */
+  window.preact = preact
+} catch (err) {
+  /**
+   * @suppress {const|checkTypes}
+   */
+  window.preact = {}
+}
+
 const {
   h,
   createElement,
@@ -280,7 +292,7 @@ const {
   render,
   rerender,
   options,
-} = window['preact'] || {}
+} = window.preact
 
 export {
   h,

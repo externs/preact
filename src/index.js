@@ -2,6 +2,18 @@
 /* start example */
 export default preact
 
+try {
+  /**
+   * @suppress {const}
+   */
+  window.preact = preact
+} catch (err) {
+  /**
+   * @suppress {const|checkTypes}
+   */
+  window.preact = {}
+}
+
 const {
   h,
   createElement,
@@ -11,7 +23,7 @@ const {
   render,
   rerender,
   options,
-} = window['preact'] || {}
+} = window.preact
 
 export {
   h,
