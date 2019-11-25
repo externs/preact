@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* start example */
 export default preact
 
@@ -10,7 +11,7 @@ const {
   render,
   rerender,
   options,
-} = preact
+} = window['preact'] || {}
 
 export {
   h,

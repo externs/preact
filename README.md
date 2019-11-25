@@ -280,7 +280,7 @@ const {
   render,
   rerender,
   options,
-} = preact
+} = window['preact'] || {}
 
 export {
   h,

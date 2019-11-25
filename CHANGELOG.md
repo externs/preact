@@ -1,3 +1,9 @@
+## 26 November 2019
+
+### [1.2.8](https://github.com/dpck/preact/compare/v1.2.7...v1.2.8)
+
+- [fix] Fallback to `{}` if window.preact is not defined.
+
 ## 7 November 2019
 
 ### [1.2.7](https://github.com/dpck/preact/compare/v1.2.6...v1.2.7)
