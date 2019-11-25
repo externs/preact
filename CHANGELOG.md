@@ -1,5 +1,9 @@
 ## 26 November 2019
 
+### [1.2.9](https://github.com/dpck/preact/compare/v1.2.8...v1.2.9)
+
+- [fix] Do fallback properly without Compiler warnings.
+
 ### [1.2.8](https://github.com/dpck/preact/compare/v1.2.7...v1.2.8)
 
 - [fix] Fallback to `{}` if window.preact is not defined.
