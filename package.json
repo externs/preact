@@ -9,10 +9,10 @@
     "test": "yarn t test/spec test/mask",
     "spec": "yarn t test/spec",
     "mask": "yarn t test/mask",
-    "test-build": "ALAMODE_ENV=test-build yarn test",
-    "wiki": "NODE_DEBUG=doc doc wiki -W ../preact.wiki -n preact",
+    "test-build": "yarn test -e test-build",
+    "wiki": "doc wiki -W wiki.git -n preact -d -a",
     "lint": "eslint .",
-    "doc": "NODE_DEBUG=doc doc -o README.md",
+    "doc": "doc -o README.md -d -a",
     "d": "yarn-s d1 externs",
     "d1": "typal build/index.js",
     "externs": "typal types/externs.js -e",
@@ -29,6 +29,7 @@
     "type": "git",
     "url": "git://github.com/externs/preact.git"
   },
+  "typedefs": "typedefs.json",
   "keywords": [
     "preact",
     "externs"
@@ -40,11 +41,11 @@
   },
   "homepage": "https://www.compiler.page",
   "devDependencies": {
-    "alamode": "^3.2.0",
-    "documentary": "^1.34.1",
+    "alamode": "^3.5.2",
+    "documentary": "^1.37.0",
     "eslint-config-artdeco": "1.0.1",
-    "typal": "^1.22.6",
-    "yarn-s": "1.1.0",
-    "zoroaster": "^4.1.2"
+    "typal": "^1.26.2",
+    "yarn-s": "1.2.3",
+    "zoroaster": "^4.3.0"
   }
 }

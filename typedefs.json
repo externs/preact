@@ -1,0 +1,42 @@
+{
+  "preact.PreactProps": {
+    "link": "https://github.com/externs/preact/wiki/API#type-preactprops",
+    "description": null
+  },
+  "preact.AcceptedChild": {
+    "link": "https://github.com/externs/preact/wiki/API#type-acceptedchild",
+    "description": "A child node that can be passed to some methods."
+  },
+  "preact.h": {
+    "link": "https://github.com/externs/preact/wiki/API#hnodename-stringfunctionattributes-preactpropsargs-acceptedchildarrayacceptedchild-vnode",
+    "description": "The pragma (rendering) function."
+  },
+  "preact.cloneElement": {
+    "link": "https://github.com/externs/preact/wiki/API#cloneelementvnode-vnodeprops-preactpropsargs-acceptedchildarrayacceptedchild-vnode",
+    "description": "Clones the given VNode, optionally adding attributes/props and replacing its children."
+  },
+  "preact.createRef": {
+    "link": "https://github.com/externs/preact/wiki/API#createref-object",
+    "description": "Just returns an object...?"
+  },
+  "preact.render": {
+    "link": "https://github.com/externs/preact/wiki/API#rendervnode-vnodeparent-elementmerge-element-void",
+    "description": "Render JSX into a `parent` Element."
+  },
+  "preact.rerender": {
+    "link": "https://github.com/externs/preact/wiki/API#rerender-void",
+    "description": "Rerenders all rendered elements."
+  },
+  "preact.Component": {
+    "link": "https://github.com/externs/preact/wiki/Component#type-component",
+    "description": "A base class that is usually subclassed to create stateful _Preact_ components."
+  },
+  "preact.options": {
+    "link": "https://github.com/externs/preact/wiki/Options#type-options",
+    "description": "Options for Preact."
+  },
+  "preact.VNode": {
+    "link": "https://github.com/externs/preact/wiki/VNode#type-vnode",
+    "description": "Virtual DOM Node."
+  }
+}
