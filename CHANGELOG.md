@@ -1,5 +1,9 @@
 ## 26 February 2020
 
+### [1.3.1](https://github.com/externs/preact/compare/v1.3.0...v1.3.1)
+
+- [fix] Publish `typdefs.json`.
+
 ### [1.3.0](https://github.com/externs/preact/compare/v1.2.9...v1.3.0)
 
 - [doc] Add `typedefs.json`.
