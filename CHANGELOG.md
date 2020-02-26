@@ -1,3 +1,9 @@
+## 26 February 2020
+
+### [1.3.0](https://github.com/externs/preact/compare/v1.2.9...v1.3.0)
+
+- [doc] Add `typedefs.json`.
+
 ## 26 November 2019
 
 ### [1.2.9](https://github.com/dpck/preact/compare/v1.2.8...v1.2.9)
